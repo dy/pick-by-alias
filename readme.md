@@ -23,7 +23,7 @@ let options = pick({
 
 ### `result = pick(source, aliases)`
 
-Return an object consisting of the properties picked by the list of aliases. The aliases are matched in priority order, ie. the names going first are picked.
+Return an object consisting of the properties picked by the list of aliases. The aliases are matched in priority order, ie. the names going first are picked. Each alias can be an array or a comma/space-separated string.
 
 ## License
 
