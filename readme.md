@@ -25,6 +25,10 @@ let options = pick({
 
 Return an object consisting of the properties picked by the list of aliases. The aliases are matched in priority order, ie. the names going first are picked. Each alias can be an array or a comma/space-separated string.
 
+## Related
+
+* [defined](https://www.npmjs.com/package/defined) − get first non-undefined out of a list of values
+
 ## License
 
 (c) 2017 Dima Yv. MIT License
