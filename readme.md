@@ -23,7 +23,18 @@ let options = pick({
 
 ### `result = pick(source, aliases)`
 
-Return an object consisting of the properties picked by the list of aliases. The aliases are matched in priority order, ie. the names going first are picked. Each alias can be an array or a comma/space-separated string.
+Return an object with properties picked by the list or dict of `aliases`. The `aliases` are matched in priority order, ie. the names going first are picked. Each alias can be an array or a comma/space-separated string.
+
+```js
+// pick by dict
+let {a, b} = pick(src, {a: ['a', 'b', 'c'], b: 'd e f'})
+
+// just pick props
+let {c, d, e} = pick(src, ['c', 'd', 'e'])
+
+// pick by string
+let {f, g} = pick(src, 'f g')
+```
 
 ## Related
 
