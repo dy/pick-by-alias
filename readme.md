@@ -29,7 +29,7 @@ Return an object with properties picked by the list or dict of `aliases`. The `a
 // pick by dict
 let {a, b} = pick(src, {a: ['a', 'b', 'c'], b: 'd e f'})
 
-// just pick props
+// pick by list
 let {c, d, e} = pick(src, ['c', 'd', 'e'])
 
 // pick by string
