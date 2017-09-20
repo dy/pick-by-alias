@@ -1,17 +1,22 @@
 'use strict'
 
-var CACHE = {}
 
 module.exports = function pick (src, props) {
 	var result = {}
 
+	if (typeof props === 'string') props = toList(props)
+	if (Array.isArray(props)) {
+		let res = {}
+		for (var i = 0; i < props.length; i++) {
+			res[props[i]] = true
+		}
+		props = res
+	}
+
 	for (var prop in props) {
 		var aliases = props[prop]
 
-		if (CACHE[aliases]) aliases = CACHE[aliases]
-		else if (typeof aliases === 'string') {
-			aliases = CACHE[aliases] = aliases.split(/\s*,\s*|\s+/)
-		}
+		aliases = toList(aliases)
 
 		if (Array.isArray(aliases)) {
 			for (var i = 0; i < aliases.length; i++) {
@@ -29,4 +34,14 @@ module.exports = function pick (src, props) {
 	}
 
 	return result
+}
+
+var CACHE = {}
+
+function toList(arg) {
+	if (CACHE[arg]) return CACHE[arg]
+	if (typeof arg === 'string') {
+		arg = CACHE[arg] = arg.split(/\s*,\s*|\s+/)
+	}
+	return arg
 }

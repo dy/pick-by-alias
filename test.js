@@ -3,7 +3,7 @@
 const t = require('tape')
 const pick = require('./')
 
-t('default', t => {
+t('obj', t => {
 	let res = pick({
 		a: 0,
 		b: null,
@@ -20,6 +20,31 @@ t('default', t => {
 		e: null,
 		f: 1
 	})
+
+	t.end()
+})
+
+t('array', t => {
+	t.deepEqual(pick({
+		a: 0,
+		b: null,
+		c: undefined,
+		d: 1,
+		e: [0, 1]
+	}, ['a', 'b', 'c', 'd']), {a: 0, b: null, c: undefined, d: 1})
+
+	t.end()
+})
+
+
+t('string', t => {
+	t.deepEqual(pick({
+		a: 0,
+		b: null,
+		c: undefined,
+		d: 1,
+		e: [0, 1]
+	}, 'a b c d'), {a: 0, b: null, c: undefined, d: 1})
 
 	t.end()
 })
