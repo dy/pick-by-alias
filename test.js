@@ -48,3 +48,9 @@ t('string', t => {
 
 	t.end()
 })
+
+t('avoid picking absent props', t => {
+	t.deepEqual(pick({a: 1, b:2}, 'a b c'), {a: 1, b: 2})
+
+	t.end()
+})

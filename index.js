@@ -28,7 +28,7 @@ module.exports = function pick (src, props) {
 				}
 			}
 		}
-		else {
+		else if (prop in src) {
 			result[prop] = src[prop]
 		}
 	}
