@@ -20,7 +20,7 @@
     "url": "https://github.com/dfcreative/pick-by-alias/issues"
   },
   "homepage": "https://github.com/dfcreative/pick-by-alias#readme",
-  "dependencies": {
+  "devDependencies": {
     "tape": "^4.8.0"
   }
 }
