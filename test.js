@@ -50,7 +50,30 @@ t('string', t => {
 })
 
 t('avoid picking absent props', t => {
-	t.deepEqual(pick({a: 1, b:2}, 'a b c'), {a: 1, b: 2})
+	t.deepEqual(pick({a: 1, b: 2}, 'a b c'), {a: 1, b: 2})
+
+	t.end()
+})
+
+t('keep rest strategy', t => {
+	t.deepEqual(pick({a: 1, B: 2, Be: 2.5, c: 3}, {
+		a: true,
+		b: 'B Be'
+	}, true),
+	{
+		a: 1,
+		b: 2,
+		c: 3
+	})
+
+	t.deepEqual(pick({a: 1, B: 2, Be: 2.5, c: 3}, {
+		a: true,
+		b: 'B Be'
+	}),
+	{
+		a: 1,
+		b: 2
+	})
 
 	t.end()
 })

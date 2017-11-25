@@ -19,7 +19,7 @@ let result = pick({
 })
 ```
 
-### `pick(object, properties)`
+### `pick(object, properties, keepRest=false)`
 
 Return an object with properties picked by the list or dict with aliases. Aliases are matched in priority order, ie. first matching name is picked. Each alias can be an array or a comma/space-separated string.
 
@@ -34,9 +34,12 @@ let {c, d, e} = pick(src, ['c', 'd', 'e'])
 let {f, g} = pick(src, 'f g')
 ```
 
+`keepRest` defines if not listed object properties should be transfered to resulting object or discarded.
+
 ## Related
 
 * [defined](https://www.npmjs.com/package/defined) − get first non-undefined out of a list of values
+* [update-diff](https://github.com/dfcreative/update-diff) − update object state by mapping diff.
 
 ## License
 
