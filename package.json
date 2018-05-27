@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dfcreative/pick-by-alias.git"
+    "url": "git+ssh://git@github.com/dy/pick-by-alias.git"
   },
   "keywords": [
     "pick",
@@ -17,9 +17,9 @@
   "author": "Dima Yv <dfcreative@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dfcreative/pick-by-alias/issues"
+    "url": "https://github.com/dy/pick-by-alias/issues"
   },
-  "homepage": "https://github.com/dfcreative/pick-by-alias#readme",
+  "homepage": "https://github.com/dy/pick-by-alias#readme",
   "devDependencies": {
     "tape": "^4.8.0"
   }

@@ -1,6 +1,6 @@
 # pick-by-alias [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges)
 
-Pick object properties by synonyms. Useful to avoid remembering exact option names from user perspective.
+Pick object properties by synonyms. Useful to avoid remembering exact option names from user perspective. That should be applied in experimental packages to identify [cow paths](https://en.wikipedia.org/wiki/Desire_path) (ie. most frequently used names) and removed once package gets stable status.
 
 [![npm install pick-by-alias](https://nodei.co/npm/pick-by-alias.png?mini=true)](https://npmjs.org/package/pick-by-alias/)
 
@@ -39,8 +39,7 @@ let {f, g} = pick(src, 'f g')
 ## Related
 
 * [defined](https://www.npmjs.com/package/defined) − get first non-undefined out of a list of values
-* [update-diff](https://github.com/dfcreative/update-diff) − update object state by mapping diff.
 
 ## License
 
-(c) 2017 Dima Yv. MIT License
+(c) 2017 Dmitry Yv. MIT License
